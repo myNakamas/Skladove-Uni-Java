@@ -1,19 +1,20 @@
-package App;
-
 import javafx.application.Application;
-//import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
-//import javafx.scene.Parent;
-import javafx.scene.paint.Color;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import org.hibernate.Session;
+import util.HibernateUtil;
+
+import java.util.Objects;
 
 public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Group root = new Group();
-            Scene s = new Scene(root, 300, 300, Color.BLACK);
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("scenes/main.fxml")));
+            Scene s = new Scene(root);
             primaryStage.setTitle("test");
             primaryStage.setScene(s);
             primaryStage.show();

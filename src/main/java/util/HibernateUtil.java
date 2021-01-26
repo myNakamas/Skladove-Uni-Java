@@ -1,4 +1,4 @@
-package App.util;
+package util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -30,7 +30,7 @@ public class HibernateUtil {
 
                 settings.put(Environment.USER, "root");
 
-                settings.put(Environment.PASS, "");
+                settings.put(Environment.PASS, "1234");
 
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL57InnoDBDialect");
 
@@ -38,11 +38,11 @@ public class HibernateUtil {
 
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
 
-                settings.put(Environment.HBM2DDL_AUTO, "update");
+                settings.put(Environment.HBM2DDL_AUTO, "create-drop");
 
                 configuration.setProperties(settings);
 
-//                configuration.addAnnotatedClass(Distributor.class);
+//                configuration.addAnnotatedClass(Entity.class);
 
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
