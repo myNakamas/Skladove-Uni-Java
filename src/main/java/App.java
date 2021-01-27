@@ -3,7 +3,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import org.hibernate.Session;
 import util.HibernateUtil;
 
 import java.util.Objects;
@@ -12,8 +11,8 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Session session = HibernateUtil.getSessionFactory().openSession();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("scenes/main.fxml")));
+            HibernateUtil.getSessionFactory().openSession();
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("scenes/LogIn.fxml")));
             Scene s = new Scene(root);
             primaryStage.setTitle("test");
             primaryStage.setScene(s);
