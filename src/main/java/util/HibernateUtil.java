@@ -1,5 +1,6 @@
 package util;
 
+import entities.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -42,7 +43,7 @@ public class HibernateUtil {
 
                 configuration.setProperties(settings);
 
-//                configuration.addAnnotatedClass(Entity.class);
+                configuration.addAnnotatedClass(User.class);
 
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()

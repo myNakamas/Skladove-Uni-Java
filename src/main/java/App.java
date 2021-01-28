@@ -1,4 +1,5 @@
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
@@ -17,6 +18,13 @@ public class App extends Application {
             primaryStage.setTitle("test");
             primaryStage.setScene(s);
             primaryStage.show();
+
+            Platform.setImplicitExit(true);
+            primaryStage.setOnCloseRequest((ae) -> {
+                Platform.exit();
+                System.exit(0);
+            });
+
         } catch(Exception e) {
             e.printStackTrace();
         }
