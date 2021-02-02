@@ -1,3 +1,5 @@
+import Services.UserService;
+import entities.User;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -25,6 +27,16 @@ public class App extends Application {
                 Platform.exit();
                 System.exit(0);
             });
+
+            User user = new User();
+            user.setUsername("admin");
+            user.setPassword("admin");
+            user.setType(1);
+            user.setRating(0);
+
+            UserService userService = new UserService();
+            userService.persist(user);
+
 
         } catch(Exception e) {
             e.printStackTrace();
