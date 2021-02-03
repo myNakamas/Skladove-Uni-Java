@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LogInController">
+   <ButtonBar layoutX="261.0" layoutY="257.0" prefHeight="42.0" prefWidth="0.0" />
+   <TextField fx:id="username" layoutX="226.0" layoutY="209.0" />
+   <PasswordField fx:id="password" layoutX="226.0" layoutY="265.0" />
+   <Text layoutX="128.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username :" wrappingWidth="68.77972412109375" />
+   <Text layoutX="128.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :" />
+   <Text fontSmoothingType="LCD" layoutX="211.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER" wrappingWidth="177.5015869140625">
+      <font>
+         <Font name="MV Boli" size="40.0" />
+      </font>
+      <fill>
+         <LinearGradient endX="0.08015267266571977" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.16241228580474854" green="0.2407938539981842" blue="0.4236842095851898" />
+                  </color>
+               </Stop>
+               <Stop offset="0.9969465648854963">
+                  <color>
+                     <Color red="0.20000000298023224" green="0.800000011920929" blue="0.6817580461502075" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.20000000298023224" green="0.800000011920929" blue="0.6817580461502075" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+   </Text>
+   <Button layoutX="274.0" layoutY="329.0" mnemonicParsing="false" onAction="#login" text="Log In" />
+   <Button layoutX="363.0" layoutY="329.0" mnemonicParsing="false" onAction="#showAccountData" text="Register" />
+</AnchorPane>
