@@ -43,7 +43,7 @@ public class HibernateUtil {
 
                 configuration.setProperties(settings);
 
-                configuration.addAnnotatedClass(connection.class);
+                configuration.addAnnotatedClass(Connection.class);
 
                 configuration.addAnnotatedClass(User.class);
 
@@ -51,7 +51,7 @@ public class HibernateUtil {
 
                 configuration.addAnnotatedClass(Stoka.class);
 
-                configuration.addAnnotatedClass(formulqr.class);
+                configuration.addAnnotatedClass(Formulqr.class);
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 

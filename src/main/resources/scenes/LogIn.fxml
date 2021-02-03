@@ -44,4 +44,5 @@
       </fill>
    </Text>
    <Button layoutX="274.0" layoutY="329.0" mnemonicParsing="false" onAction="#login" text="Log In" />
+   <Button layoutX="363.0" layoutY="329.0" mnemonicParsing="false" onAction="#showAccountData" text="Register" />
 </AnchorPane>
