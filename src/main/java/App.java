@@ -1,15 +1,8 @@
 import Services.UserService;
 import entities.User;
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import javafx.scene.Scene;
-import util.HibernateUtil;
-
-import java.util.Objects;
+import util.SceneLoader;
 
 public class App extends Application {
     @Override
