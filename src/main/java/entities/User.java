@@ -17,7 +17,7 @@ public class User {
     private String password;
 
     @Column(name = "type")
-    private int type;
+    private int type;   //1 = admin. 2 = agent. 3 = owner
 
     @Column(name = "rating")
     private int rating;
@@ -60,5 +60,14 @@ public class User {
 
     public void setRating(int rating) {
         this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", type=" + type +
+                '}';
     }
 }
