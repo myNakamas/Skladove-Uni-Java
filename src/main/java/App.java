@@ -13,19 +13,8 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            HibernateUtil.getSessionFactory().openSession();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("scenes/LogIn.fxml")));
-            Scene s = new Scene(root);
-            primaryStage.setTitle("Storage");
-            primaryStage.setScene(s);
-            primaryStage.show();
-            primaryStage.getIcons().add(new Image("images/house.png"));
-            Platform.setImplicitExit(true);
-            primaryStage.setOnCloseRequest((ae) -> {
-                Platform.exit();
-                System.exit(0);
-            });
-
+            SceneLoader.changeScene("scenes/Login.fxml",primaryStage,"Login");
+            SceneLoader.setTerminateOnClose(primaryStage);
         } catch(Exception e) {
             e.printStackTrace();
         }
