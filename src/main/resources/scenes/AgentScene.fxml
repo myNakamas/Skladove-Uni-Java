@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AgentSceneController">
+   <children>
+      <PasswordField layoutX="218.0" layoutY="251.0" />
+      <TextField layoutX="218.0" layoutY="188.0" onAction="#checkUserName" />
+      <Text layoutX="92.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+      <Text layoutX="94.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <Text layoutX="155.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Standard Profile">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text disable="true" layoutX="409.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="409.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="145.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Please enter 6 to 12 charcters or numbers)" />
+      <Button fx:id="registerButton" layoutX="267.0" layoutY="322.0" mnemonicParsing="false" text="Register" />
+   </children>
+</AnchorPane>
