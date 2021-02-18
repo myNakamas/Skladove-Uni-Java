@@ -1,6 +1,7 @@
 package util;
 
 import Controllers.LogInController;
+import entities.User;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +11,17 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
-public class SceneOperator {
+public final class SceneOperator {
+
+    private static User CurUser;
+
+    public static User getUser() {
+        return CurUser;
+    }
+
+    public static void setUser(User user) {
+        CurUser = user;
+    }
 
     public static void setScene(Class aClass, String scene, String title, Stage primaryStage) {
         try {

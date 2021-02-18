@@ -3,8 +3,10 @@ package Controllers;
 import Services.UserService;
 import entities.User;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -31,10 +33,11 @@ public class LogInController implements Initializable {
             if(i.getUsername().equals(username.getText())&&i.getPassword().equals(password.getText()))
             {
                 Stage primaryStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                SceneOperator.setUser(i);
                 switch(i.getType())
                 {
                     case 1: SceneOperator.setScene(this.getClass(),"scenes/AdminScene.fxml", "Admin", primaryStage); break;
-                    case 2: SceneOperator.setScene(this.getClass(), "scenes/AgentScene.fxml", "Agent", primaryStage); break;
+                    case 2: SceneOperator.setScene(this.getClass(), "scenes/AgentScene.fxml", "Agent", primaryStage);  break;
                     case 3: SceneOperator.setScene(this.getClass(), "scenes/OwnerScene.fxml", "Owner", primaryStage); break;
                 }
             }
