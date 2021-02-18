@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="164.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminController">
+   <children>
+      <Button layoutX="24.0" layoutY="104.0" mnemonicParsing="false" onAction="#create" text="Create account" />
+      <Button layoutX="159.0" layoutY="104.0" mnemonicParsing="false" onAction="#storage" text="New Storage " />
+      <Button layoutX="393.0" layoutY="104.0" mnemonicParsing="false" text="Account edit" />
+      <Button layoutX="509.0" layoutY="104.0" mnemonicParsing="false" text="Rating" />
+      <Button layoutX="281.0" layoutY="104.0" mnemonicParsing="false" text="Edit Storage" />
+      <Label fx:id="AdmName" layoutX="186.0" layoutY="33.0" text="Welcome, ">
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.17175574157074203" startX="0.824427449976215">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7200000286102295" green="0.18000000715255737" blue="0.18000000715255737" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9961832061068702">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
