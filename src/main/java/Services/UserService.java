@@ -31,6 +31,13 @@ public class UserService {
         return user;
     }
 
+    public User findByUsername(String col, String usrnm) {
+        userDao.openCurrentSession();
+        User user = userDao.findByUsername(col, usrnm);
+        userDao.closeCurrentSession();
+        return user;
+    }
+
     public void delete(int id) {
         userDao.openCurrentSessionwithTransaction();
         User user = userDao.findById(id);

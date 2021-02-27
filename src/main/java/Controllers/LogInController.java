@@ -36,10 +36,11 @@ public class LogInController implements Initializable {
                 SceneOperator.setUser(i);
                 switch(i.getType())
                 {
-                    case 1: SceneOperator.setScene(this.getClass(),"scenes/AdminScene.fxml", "Admin", primaryStage); break;
-                    case 2: SceneOperator.setScene(this.getClass(), "scenes/AgentScene.fxml", "Agent", primaryStage);  break;
-                    case 3: SceneOperator.setScene(this.getClass(), "scenes/OwnerScene.fxml", "Owner", primaryStage); break;
+                    case 0: SceneOperator.setScene(this.getClass(),"scenes/AdminScene.fxml", "Admin", primaryStage); break;
+                    case 1: SceneOperator.setScene(this.getClass(), "scenes/AgentScene.fxml", "Agent", primaryStage);  break;
+                    case 2: SceneOperator.setScene(this.getClass(), "scenes/OwnerScene.fxml", "Owner", primaryStage); break;
                 }
+                break;
             }
             else {
                 System.out.println("Wrong username or password");

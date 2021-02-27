@@ -2,8 +2,10 @@ package DAO;
 
 import DAO.Interfaces.DaoInterface;
 import entities.User;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 import util.HibernateUtil;
 
 import java.util.List;
@@ -60,11 +62,18 @@ public class UserDao implements DaoInterface<User> {
     public User findById(int id) {
         return getCurrentSession().get(User.class, id);
     }
+
     public void delete(User entity) {
         getCurrentSession().delete(entity);
     }
 
     public List<User> findAll() {
         return (List<User>) getCurrentSession().createQuery("from User").list();
+    }
+
+    public User findByUsername(String col, String value) {
+        Criteria crit = currentSession.createCriteria(User.class);
+        crit.add(Restrictions.eq(col,value));
+        return (User) crit.uniqueResult();
     }
 }

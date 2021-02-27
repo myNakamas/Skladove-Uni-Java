@@ -17,7 +17,7 @@ public class User {
     private String password;
 
     @Column(name = "type")
-    private int type;   //1 = admin. 2 = agent. 3 = owner
+    private int type;   //0 = admin. 1 = agent. 2 = owner
 
     @Column(name = "rating")
     private int rating;
