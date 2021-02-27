@@ -11,6 +11,7 @@ public class App extends Application {
             SceneOperator.setup(primaryStage);
             SceneOperator.setScene(this.getClass(), "scenes/LogIn.fxml", "Login", primaryStage);
 
+
         } catch(Exception e) {
             e.printStackTrace();
         }

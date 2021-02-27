@@ -46,5 +46,20 @@ public class LogInController implements Initializable {
                 System.out.println("Wrong username or password");
             }
         }
+
     }
+
+//    public void showAccountData() {
+//        UserService userService = new UserService();
+//        User newUser = new User();
+//        String uName = username.getText();
+//        newUser.setUsername(uName);
+//
+//        String uPass = password.getText();
+//        newUser.setPassword(uPass);
+//
+//        userService.persist(newUser);
+//
+//    }
+
 }
